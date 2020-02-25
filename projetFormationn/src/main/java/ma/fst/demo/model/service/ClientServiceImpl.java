@@ -35,7 +35,7 @@ public class ClientServiceImpl implements ClientService {
 	@Override
 	public int note() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 }
