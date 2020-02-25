@@ -19,6 +19,7 @@ public class Client implements Serializable {
 	private String prenom;
 	private String cin;
 	private Paiement paimment;
+	
 	@ManyToOne
 	private Professeur prof;
 

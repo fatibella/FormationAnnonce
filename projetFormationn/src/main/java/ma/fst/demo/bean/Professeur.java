@@ -23,6 +23,10 @@ public class Professeur implements Serializable {
 	
 	@OneToMany(mappedBy = "prof")
 	private List<Client> clients;
+	
+	@OneToMany (mappedBy = "prof")
+	private List <Review>review;
+	
 
 	public Long getId() {
 		return id;

@@ -12,4 +12,6 @@ public interface ClientService {
 
 	public List<Client> findAll();
 
+	public int note();
+
 }

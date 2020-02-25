@@ -32,4 +32,10 @@ public class ClientServiceImpl implements ClientService {
 		return clientDao.findByCin(cin);
 	}
 
+	@Override
+	public int note() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

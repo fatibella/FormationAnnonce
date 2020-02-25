@@ -27,6 +27,9 @@ public class AnnonceFormation implements Serializable {
 	
 	@OneToMany(mappedBy = "annonceFormation")
 	private List<Filliere> filliers;
+	
+	@OneToMany
+	private Review review;
 
 	public Long getId() {
 		return id;

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Review implements Serializable {
@@ -16,7 +17,12 @@ public class Review implements Serializable {
 	private Long id;
 	private int point;
 	private String comm;
+	
+	@ManyToOne
 	private AnnonceFormation annonceFormation;
+	
+	@ManyToOne
+	private Professeur prof;
 
 	public Long getId() {
 		return id;

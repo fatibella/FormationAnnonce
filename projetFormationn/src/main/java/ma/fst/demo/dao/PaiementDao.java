@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import ma.fst.demo.bean.Client;
 import ma.fst.demo.bean.Paiement;
 
+
+
 @Repository
 public interface PaiementDao extends JpaRepository<Paiement, Long> {
 
