@@ -22,8 +22,16 @@ public class Niveau implements Serializable {
 	@ManyToOne
 	private Filliere filliere;
 
-	@OneToMany(mappedBy = "module")
+	@OneToMany(mappedBy = "niveau")
 	private List<Module> modules;
+
+	public Filliere getFilliere() {
+		return filliere;
+	}
+
+	public void setFilliere(Filliere filliere) {
+		this.filliere = filliere;
+	}
 
 	public Long getId() {
 		return id;

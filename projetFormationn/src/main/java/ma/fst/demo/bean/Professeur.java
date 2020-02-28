@@ -16,17 +16,24 @@ public class Professeur implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String ref;
+	private String reference;
 	private String nom;
 	private String prenom;
 	private double salaire;
-	
+
 	@OneToMany(mappedBy = "prof")
 	private List<Client> clients;
-	
-	@OneToMany (mappedBy = "prof")
-	private List <Review>review;
-	
+
+	@OneToMany(mappedBy = "prof")
+	private List<Review> review;
+
+	public List<Review> getReview() {
+		return review;
+	}
+
+	public void setReview(List<Review> review) {
+		this.review = review;
+	}
 
 	public Long getId() {
 		return id;
@@ -60,13 +67,12 @@ public class Professeur implements Serializable {
 		this.salaire = salaire;
 	}
 
-	
-	public String getRef() {
-		return ref;
+	public String getReference() {
+		return reference;
 	}
 
-	public void setRef(String ref) {
-		this.ref = ref;
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 
 	public static long getSerialversionuid() {

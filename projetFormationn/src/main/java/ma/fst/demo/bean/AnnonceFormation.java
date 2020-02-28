@@ -20,16 +20,48 @@ public class AnnonceFormation implements Serializable {
 	private Date dateDebut;
 	private Date dateFin;
 	private double prix;
+	private String reference;
 
-	
+	public String getReference() {
+		return reference;
+	}
+
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+
 	@OneToMany(mappedBy = "annonceFormation")
 	private List<Client> clients;
-	
+
 	@OneToMany(mappedBy = "annonceFormation")
 	private List<Filliere> filliers;
-	
-	@OneToMany
-	private Review review;
+
+	@OneToMany(mappedBy = "annonceFormation")
+	private List<Review> reviews;
+
+	public Date getDateDebut() {
+		return dateDebut;
+	}
+
+	public void setDateDebut(Date dateDebut) {
+		this.dateDebut = dateDebut;
+	}
+
+	public Date getDateFin() {
+		return dateFin;
+	}
+
+	public void setDateFin(Date dateFin) {
+		this.dateFin = dateFin;
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
+	}
 
 	public Long getId() {
 		return id;

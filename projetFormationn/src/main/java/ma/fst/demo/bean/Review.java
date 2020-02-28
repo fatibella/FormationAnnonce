@@ -16,16 +16,24 @@ public class Review implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private int point;
-	private String comm;
-	
+	private String commentaire;
+
 	@ManyToOne
 	private AnnonceFormation annonceFormation;
-	
+
 	@ManyToOne
 	private Professeur prof;
 
 	public Long getId() {
 		return id;
+	}
+
+	public Professeur getProf() {
+		return prof;
+	}
+
+	public void setProf(Professeur prof) {
+		this.prof = prof;
 	}
 
 	public void setId(Long id) {
@@ -40,12 +48,12 @@ public class Review implements Serializable {
 		this.point = point;
 	}
 
-	public String getComm() {
-		return comm;
+	public String getCommentaire() {
+		return commentaire;
 	}
 
-	public void setComm(String comm) {
-		this.comm = comm;
+	public void setCommentaire(String commentaire) {
+		this.commentaire = commentaire;
 	}
 
 	public AnnonceFormation getAnnonceFormation() {
@@ -65,11 +73,11 @@ public class Review implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Review(Long id, int point, String comm, AnnonceFormation annonceFormation) {
+	public Review(Long id, int point, String commentaire, AnnonceFormation annonceFormation) {
 		super();
 		this.id = id;
 		this.point = point;
-		this.comm = comm;
+		this.commentaire = commentaire;
 		this.annonceFormation = annonceFormation;
 	}
 

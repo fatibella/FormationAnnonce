@@ -19,12 +19,28 @@ public class Client implements Serializable {
 	private String prenom;
 	private String cin;
 	private Paiement paimment;
-	
+
 	@ManyToOne
 	private Professeur prof;
 
 	@ManyToOne
 	private AnnonceFormation annonceFormation;
+
+	public Professeur getProf() {
+		return prof;
+	}
+
+	public void setProf(Professeur prof) {
+		this.prof = prof;
+	}
+
+	public AnnonceFormation getAnnonceFormation() {
+		return annonceFormation;
+	}
+
+	public void setAnnonceFormation(AnnonceFormation annonceFormation) {
+		this.annonceFormation = annonceFormation;
+	}
 
 	public Long getId() {
 		return id;

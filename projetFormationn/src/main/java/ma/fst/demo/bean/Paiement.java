@@ -16,9 +16,9 @@ public class Paiement implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private BigDecimal total;
-	
+
 	private Module module;
-	
+
 	private Client client;
 
 	public Long getId() {
@@ -49,8 +49,6 @@ public class Paiement implements Serializable {
 		return serialVersionUID;
 	}
 
-	
-	
 	public BigDecimal getTotal() {
 		return total;
 	}

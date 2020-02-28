@@ -16,8 +16,8 @@ public class Module implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String ref;
-	private String Libelle;
+	private String reference;
+	private String libelle;
 
 	@ManyToOne
 	private Niveau niveau;
@@ -30,31 +30,47 @@ public class Module implements Serializable {
 		this.id = id;
 	}
 
+	public String getreference() {
+		return reference;
+	}
+
+	public void setreference(String reference) {
+		this.reference = reference;
+	}
+
 	public String getLibelle() {
-		return Libelle;
+		return libelle;
 	}
 
-	public void setLibelle(String Libelle) {
-		this.Libelle = Libelle;
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
 	}
 
-	public String getref() {
-		return ref;
+	public Niveau getNiveau() {
+		return niveau;
 	}
 
-	public void setref(String ref) {
-		this.ref = ref;
+	public void setNiveau(Niveau niveau) {
+		this.niveau = niveau;
+	}
+
+	public String getReference() {
+		return reference;
+	}
+
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-	public Module(Long id, String Libelle, String ref) {
+	public Module(Long id, String Libelle, String reference) {
 		super();
 		this.id = id;
-		this.Libelle = Libelle;
-		this.ref = ref;
+		this.libelle = Libelle;
+		this.reference = reference;
 	}
 
 	public Module() {

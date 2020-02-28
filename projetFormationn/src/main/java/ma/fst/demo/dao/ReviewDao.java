@@ -10,5 +10,5 @@ import ma.fst.demo.bean.Review;
 @Repository
 public interface ReviewDao extends JpaRepository<Review, Long> {
 
-	public void findByProfandClient(Professeur prof, Client client);
+//	public void findByProfandClient(Professeur prof, Client client);
 }

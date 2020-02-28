@@ -17,14 +17,22 @@ public class Filliere implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String ref;
-	
+	private String reference;
+
 	@OneToMany
 	private List<Niveau> niveaux;
 
 	@ManyToOne
 	private AnnonceFormation annonceFormation;
-	
+
+	public AnnonceFormation getAnnonceFormation() {
+		return annonceFormation;
+	}
+
+	public void setAnnonceFormation(AnnonceFormation annonceFormation) {
+		this.annonceFormation = annonceFormation;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -45,12 +53,12 @@ public class Filliere implements Serializable {
 		return serialVersionUID;
 	}
 
-	public String getRef() {
-		return ref;
+	public String getReference() {
+		return reference;
 	}
 
-	public void setRef(String ref) {
-		this.ref = ref;
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 
 	public Filliere() {
@@ -58,16 +66,16 @@ public class Filliere implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Filliere(Long id, String ref, List<Niveau> niveaux) {
+	public Filliere(Long id, String reference, List<Niveau> niveaux) {
 		super();
 		this.id = id;
-		this.ref = ref;
+		this.reference = reference;
 		this.niveaux = niveaux;
 	}
 
 	@Override
 	public String toString() {
-		return "Filliere [id=" + id + ", ref=" + ref + ", niveaux=" + niveaux + "]";
+		return "Filliere [id=" + id + ", reference=" + reference + ", niveaux=" + niveaux + "]";
 	}
 
 }
