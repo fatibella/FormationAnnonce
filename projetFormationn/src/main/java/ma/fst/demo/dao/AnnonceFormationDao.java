@@ -10,4 +10,6 @@ public interface AnnonceFormationDao extends JpaRepository<AnnonceFormation, Lon
 
 	public AnnonceFormation findByreference(String reference);
 
+	public AnnonceFormation findByprix(int prix);
+
 }
