@@ -8,6 +8,6 @@ import ma.fst.demo.bean.Professeur;
 @Repository
 public interface ProfesseurDao extends JpaRepository<Professeur, Long> {
 
-	public Professeur findByRef(String ref);
+	public Professeur findByReference(String reference);
 
 }

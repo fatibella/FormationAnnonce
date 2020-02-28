@@ -8,5 +8,5 @@ import ma.fst.demo.bean.Filliere;
 @Repository
 public interface FilliereDao extends JpaRepository<Filliere, Long> {
 
-	public Filliere findByRef(String ref);
+	public Filliere findByReference(String reference);
 }
