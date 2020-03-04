@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -24,14 +25,6 @@ public class Filliere implements Serializable {
 
 	@ManyToOne
 	private AnnonceFormation annonceFormation;
-
-	public AnnonceFormation getAnnonceFormation() {
-		return annonceFormation;
-	}
-
-	public void setAnnonceFormation(AnnonceFormation annonceFormation) {
-		this.annonceFormation = annonceFormation;
-	}
 
 	public Long getId() {
 		return id;
@@ -59,6 +52,14 @@ public class Filliere implements Serializable {
 
 	public void setReference(String reference) {
 		this.reference = reference;
+	}
+
+	public AnnonceFormation getAnnonceFormation() {
+		return annonceFormation;
+	}
+
+	public void setAnnonceFormation(AnnonceFormation annonceFormation) {
+		this.annonceFormation = annonceFormation;
 	}
 
 	public Filliere() {

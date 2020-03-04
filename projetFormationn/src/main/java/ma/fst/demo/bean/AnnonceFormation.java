@@ -22,14 +22,6 @@ public class AnnonceFormation implements Serializable {
 	private double prix;
 	private String reference;
 
-	public String getReference() {
-		return reference;
-	}
-
-	public void setReference(String reference) {
-		this.reference = reference;
-	}
-
 	@OneToMany(mappedBy = "annonceFormation")
 	private List<Client> clients;
 
@@ -38,6 +30,14 @@ public class AnnonceFormation implements Serializable {
 
 	@OneToMany(mappedBy = "annonceFormation")
 	private List<Review> reviews;
+
+	public String getReference() {
+		return reference;
+	}
+
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
 
 	public Date getDateDebut() {
 		return dateDebut;

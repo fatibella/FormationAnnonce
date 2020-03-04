@@ -38,4 +38,12 @@ public class ClientServiceImpl implements ClientService {
 		return 1;
 	}
 
+	public ClientDao getClientDao() {
+		return clientDao;
+	}
+
+	public void setClientDao(ClientDao clientDao) {
+		this.clientDao = clientDao;
+	}
+
 }

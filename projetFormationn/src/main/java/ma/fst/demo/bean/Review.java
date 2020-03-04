@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Review implements Serializable {
@@ -21,6 +22,8 @@ public class Review implements Serializable {
 	@ManyToOne
 	private AnnonceFormation annonceFormation;
 
+	private Client client;
+
 	@ManyToOne
 	private Professeur prof;
 
@@ -28,12 +31,12 @@ public class Review implements Serializable {
 		return id;
 	}
 
-	public Professeur getProf() {
-		return prof;
+	public Client getClient() {
+		return client;
 	}
 
-	public void setProf(Professeur prof) {
-		this.prof = prof;
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
 	public void setId(Long id) {
@@ -73,12 +76,13 @@ public class Review implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Review(Long id, int point, String commentaire, AnnonceFormation annonceFormation) {
+	public Review(Long id, int point, String commentaire, AnnonceFormation annonceFormation, Client client) {
 		super();
 		this.id = id;
 		this.point = point;
 		this.commentaire = commentaire;
 		this.annonceFormation = annonceFormation;
+		this.client = client;
 	}
 
 }

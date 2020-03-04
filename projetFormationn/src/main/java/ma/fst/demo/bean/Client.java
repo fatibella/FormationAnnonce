@@ -18,6 +18,7 @@ public class Client implements Serializable {
 	private String nom;
 	private String prenom;
 	private String cin;
+
 	private Paiement paimment;
 
 	@ManyToOne
@@ -25,6 +26,8 @@ public class Client implements Serializable {
 
 	@ManyToOne
 	private AnnonceFormation annonceFormation;
+
+	private Review review;
 
 	public Professeur getProf() {
 		return prof;
@@ -80,6 +83,14 @@ public class Client implements Serializable {
 
 	public void setPaimment(Paiement paimment) {
 		this.paimment = paimment;
+	}
+
+	public Review getReview() {
+		return review;
+	}
+
+	public void setReview(Review review) {
+		this.review = review;
 	}
 
 	public static long getSerialversionuid() {

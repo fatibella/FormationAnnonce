@@ -2,6 +2,7 @@ package ma.fst.demo.bean;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,11 +16,14 @@ public class Paiement implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private BigDecimal total;
+	private BigDecimal prix;
+	private Date date;
 
-	private Module module;
+	private AnnonceFormation annonceFormation;
 
 	private Client client;
+
+	private Professeur prof;
 
 	public Long getId() {
 		return id;
@@ -29,12 +33,12 @@ public class Paiement implements Serializable {
 		this.id = id;
 	}
 
-	public Module getModule() {
-		return module;
+	public Date getdate() {
+		return date;
 	}
 
-	public void setModule(Module module) {
-		this.module = module;
+	public void setdate(Date date) {
+		this.date = date;
 	}
 
 	public Client getClient() {
@@ -49,29 +53,33 @@ public class Paiement implements Serializable {
 		return serialVersionUID;
 	}
 
-	public BigDecimal getTotal() {
-		return total;
-	}
-
-	public void setTotal(BigDecimal total) {
-		this.total = total;
-	}
-
 	public Paiement() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Paiement(Long id, Module module, Client client) {
-		super();
-		this.id = id;
-		this.module = module;
-		this.client = client;
+	public BigDecimal getPrix() {
+		return prix;
 	}
 
-	@Override
-	public String toString() {
-		return "Paimment [id=" + id + ", module=" + module + ", client=" + client + "]";
+	public void setPrix(BigDecimal prix) {
+		this.prix = prix;
+	}
+
+	public AnnonceFormation getAnnonceFormation() {
+		return annonceFormation;
+	}
+
+	public void setAnnonceFormation(AnnonceFormation annonceFormation) {
+		this.annonceFormation = annonceFormation;
+	}
+
+	public Professeur getProf() {
+		return prof;
+	}
+
+	public void setProf(Professeur prof) {
+		this.prof = prof;
 	}
 
 }
