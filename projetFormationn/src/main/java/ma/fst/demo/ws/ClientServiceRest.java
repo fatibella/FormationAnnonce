@@ -34,4 +34,12 @@ public class ClientServiceRest {
 		return clientService.findAll();
 	}
 
+	public ClientService getClientService() {
+		return clientService;
+	}
+
+	public void setClientService(ClientService clientService) {
+		this.clientService = clientService;
+	}
+
 }

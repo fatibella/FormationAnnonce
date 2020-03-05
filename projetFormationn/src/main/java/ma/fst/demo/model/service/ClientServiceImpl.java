@@ -46,4 +46,5 @@ public class ClientServiceImpl implements ClientService {
 		this.clientDao = clientDao;
 	}
 
+	
 }
