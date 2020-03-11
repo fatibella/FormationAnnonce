@@ -8,8 +8,8 @@ import ma.fst.demo.bean.AnnonceFormation;
 @Repository
 public interface AnnonceFormationDao extends JpaRepository<AnnonceFormation, Long> {
 
-	public AnnonceFormation findByreference(String reference);
-
 	public AnnonceFormation findByprix(int prix);
+
+	public AnnonceFormation findByReference(String reference);
 
 }

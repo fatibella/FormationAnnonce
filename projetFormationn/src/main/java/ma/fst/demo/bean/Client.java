@@ -97,13 +97,12 @@ public class Client implements Serializable {
 		return serialVersionUID;
 	}
 
-	public Client(Long id, String nom, String prenom, String cin, Paiement paimment) {
+	public Client(Long id, String nom, String prenom, String cin) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.cin = cin;
-		this.paimment = paimment;
 	}
 
 	public Client() {

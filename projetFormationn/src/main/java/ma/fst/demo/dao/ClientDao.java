@@ -9,4 +9,8 @@ import ma.fst.demo.bean.Client;
 public interface ClientDao extends JpaRepository<Client, Long> {
 
 	public Client findByCin(String cin);
+	
+
+
+
 }

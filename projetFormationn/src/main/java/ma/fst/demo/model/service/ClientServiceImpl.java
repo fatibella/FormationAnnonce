@@ -17,7 +17,6 @@ public class ClientServiceImpl implements ClientService {
 
 	@Override
 	public void save(Client client) {
-
 		clientDao.save(client);
 	}
 
@@ -46,5 +45,4 @@ public class ClientServiceImpl implements ClientService {
 		this.clientDao = clientDao;
 	}
 
-	
 }

@@ -1,5 +1,13 @@
 package ma.fst.demo.model.facade;
 
-public interface ProfesseurService {
+import java.util.List;
 
+import ma.fst.demo.bean.Professeur;
+
+public interface ProfesseurService {
+	public Professeur findByReference(String reference);
+
+	public Professeur save(Professeur prof);
+
+	public List<Professeur> findAll();
 }
